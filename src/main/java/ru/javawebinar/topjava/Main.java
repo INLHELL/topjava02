@@ -1,5 +1,7 @@
 package ru.javawebinar.topjava;
 
+import java.io.IOException;
+
 /**
  * User: gkislin
  * Date: 15.01.2015
@@ -8,7 +10,7 @@ package ru.javawebinar.topjava;
  * @link http://caloriesmng.herokuapp.com/
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.format("Hello Topjava Webinar!");
     }
 }
