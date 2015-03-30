@@ -9,7 +9,7 @@ import ru.javawebinar.topjava.service.api.UserService;
 import java.util.List;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 @Controller
 public class AdminUserRestController {

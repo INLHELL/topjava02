@@ -5,7 +5,7 @@ import java.util.EnumSet;
 import java.util.Set;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 public class User extends NamedEntity {
     protected String email;

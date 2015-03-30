@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Set;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 public class LoggedUser {
     private static LoggedUser LOGGED_USER = new LoggedUser();

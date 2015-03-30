@@ -5,7 +5,7 @@ import ru.javawebinar.topjava.model.User;
 import java.util.List;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 public interface UserRepository {
     User save(User user);

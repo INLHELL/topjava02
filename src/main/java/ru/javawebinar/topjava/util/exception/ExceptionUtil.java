@@ -3,7 +3,7 @@ package ru.javawebinar.topjava.util.exception;
 import ru.javawebinar.topjava.LoggerWrapper;
 
 /**
- * Created by vladislav.fedootv on 09.03.2015.
+ * Created by vladislav.fedotov on 09.03.2015.
  */
 public class ExceptionUtil {
     private static final LoggerWrapper LOG = LoggerWrapper.get(ExceptionUtil.class);

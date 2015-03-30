@@ -3,7 +3,7 @@ package ru.javawebinar.topjava.model;
 import java.time.LocalDateTime;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 public class UserMeal extends BaseEntity {
     private LocalDateTime dateTime;

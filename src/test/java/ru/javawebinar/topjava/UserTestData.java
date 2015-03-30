@@ -10,7 +10,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Created by vladislav.fedootv on 19.03.2015.
+ * Created by vladislav.fedotov on 19.03.2015.
  */
 public class UserTestData {
     public static final TestUser USER = new TestUser(BaseEntity.START_SEQ + 1, "User", "user@yandex.ru", "password", true,

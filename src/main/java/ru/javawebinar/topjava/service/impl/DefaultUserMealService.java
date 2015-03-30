@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 /**
- * Created by vladislav.fedootv on 09.03.2015.
+ * Created by vladislav.fedotov on 09.03.2015.
  */
 @Service
 public class DefaultUserMealService implements UserMealService {

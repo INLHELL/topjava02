@@ -12,7 +12,7 @@ import ru.javawebinar.topjava.util.exception.NotFoundException;
 import java.util.List;
 
 /**
- * Created by vladislav.fedootv on 09.03.2015.
+ * Created by vladislav.fedotov on 09.03.2015.
  */
 @Service
 public class DefaultUserService implements UserService {

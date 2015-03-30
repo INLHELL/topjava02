@@ -7,7 +7,7 @@ import ru.javawebinar.topjava.web.user.AdminUserRestController;
 import java.util.Arrays;
 
 /**
- * Created by vladislav.fedootv on 09.03.2015.
+ * Created by vladislav.fedotov on 09.03.2015.
  */
 public class SpringMain {
     public static void main(String[] args) {

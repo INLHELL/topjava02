@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 /**
- * Created by vladislav.fedootv on 17.03.2015.
+ * Created by vladislav.fedotov on 17.03.2015.
  */
 @Repository
 public class DefaultJdbcUserMealRepository implements UserMealRepository {

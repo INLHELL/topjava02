@@ -6,7 +6,7 @@ import ru.javawebinar.topjava.model.UserMeal;
 import java.util.function.Function;
 
 /**
- * Created by vladislav.fedootv on 18.03.2015.
+ * Created by vladislav.fedotov on 18.03.2015.
  */
 public class MealTestData {
 

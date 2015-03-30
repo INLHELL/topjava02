@@ -3,7 +3,7 @@ package ru.javawebinar.topjava.model;
 import ru.javawebinar.topjava.LoggerWrapper;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 public class BaseEntity {
     public static final int START_SEQ = 100_000;

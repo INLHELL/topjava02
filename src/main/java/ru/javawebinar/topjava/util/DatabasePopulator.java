@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 
 
 /**
- * Created by vladislav.fedootv on 18.03.2015.
+ * Created by vladislav.fedotov on 18.03.2015.
  */
 public class DatabasePopulator extends ResourceDatabasePopulator {
     private static final ResourceLoader RESOURCE_LOADER = new DefaultResourceLoader();

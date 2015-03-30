@@ -7,7 +7,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
- * Created by vladislav.fedootv on 18.03.2015.
+ * Created by vladislav.fedotov on 18.03.2015.
  */
 public class ModelMatcher<T, R> {
     protected Function<T, R> entityConverter;

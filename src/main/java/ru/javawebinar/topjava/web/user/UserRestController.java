@@ -8,7 +8,7 @@ import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.service.api.UserService;
 
 /**
- * Created by vladislav.fedootv on 06.03.2015.
+ * Created by vladislav.fedotov on 06.03.2015.
  */
 @Controller
 public class UserRestController {

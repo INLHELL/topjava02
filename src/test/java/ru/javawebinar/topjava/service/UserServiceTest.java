@@ -22,7 +22,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by vladislav.fedootv on 19.03.2015.
+ * Created by vladislav.fedotov on 19.03.2015.
  */
 
 @ContextConfiguration({"classpath:spring/spring-app.xml", "classpath:spring/spring-db.xml"})
