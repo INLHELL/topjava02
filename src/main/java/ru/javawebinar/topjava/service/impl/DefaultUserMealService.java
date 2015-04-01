@@ -9,7 +9,6 @@ import ru.javawebinar.topjava.util.exception.ExceptionUtil;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 /**
@@ -57,6 +56,6 @@ public class DefaultUserMealService implements UserMealService {
     @Override
     public List<UserMeal> getBetween(LocalDateTime start, LocalDateTime end, int userId) throws NotFoundException {
         // ??? what for plus(1, ChronoUnit.DAYS), why no ExceptionUtil.check
-        return ExceptionUtil.check(repository.getBetween(start, end.plus(1, ChronoUnit.DAYS), userId), userId);
+        return repository.getBetween(start, end, userId);
     }
 }
