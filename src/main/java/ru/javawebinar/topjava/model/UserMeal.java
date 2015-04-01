@@ -14,7 +14,7 @@ public class UserMeal extends BaseEntity {
     public UserMeal() {
     }
 
-    public UserMeal(Integer id, LocalDateTime date, int calories, String description) {
+    public UserMeal(Integer id, LocalDateTime date, String description, int calories) {
         super(id);
         this.dateTime = date;
         this.calories = calories;
@@ -22,10 +22,7 @@ public class UserMeal extends BaseEntity {
     }
 
     public UserMeal(UserMeal other) {
-        this.dateTime = other.dateTime;
-        this.calories = other.calories;
-        this.description = other.description;
-        this.user = other.user;
+        this(other.id, other.dateTime, other.description, other.calories);
     }
 
     public LocalDateTime getDateTime() {
