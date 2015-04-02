@@ -14,8 +14,6 @@ import ru.javawebinar.topjava.LoggerWrapper;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.repository.api.UserMealRepository;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,17 +24,16 @@ import java.util.List;
 @Repository
 public class DefaultJdbcUserMealRepository implements UserMealRepository {
     private static final LoggerWrapper LOG = LoggerWrapper.get(DefaultJdbcUserMealRepository.class);
-    private static final RowMapper<UserMeal> ROW_MAPPER = new RowMapper<UserMeal>() {
-        @Override
-        public UserMeal mapRow(ResultSet rs, int rowNum) throws SQLException {
-            UserMeal userMeal = new UserMeal();
-            userMeal.setId(rs.getInt("id"));
-            userMeal.setDateTime(rs.getTimestamp("date").toLocalDateTime());
-            userMeal.setDescription(rs.getString("description"));
-            userMeal.setCalories(rs.getInt("calories"));
-            return userMeal;
-        }
-    };
+    private static final RowMapper<UserMeal> ROW_MAPPER =
+            (rs, rowNum) -> {
+                UserMeal userMeal = new UserMeal();
+                userMeal.setId(rs.getInt("id"));
+                userMeal.setDateTime(rs.getTimestamp("date").toLocalDateTime());
+                userMeal.setDescription(rs.getString("description"));
+                userMeal.setCalories(rs.getInt("calories"));
+                return userMeal;
+            };
+
 
     @Autowired
     @Qualifier("userMealJdbcInsert")
