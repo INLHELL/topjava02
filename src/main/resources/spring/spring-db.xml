@@ -30,13 +30,13 @@
 
     <bean id="userMealJdbcInsert" class="org.springframework.jdbc.core.simple.SimpleJdbcInsert">
         <constructor-arg ref="dataSource"/>
-        <property name="tableName" value="USER_MEALS"/>
+        <property name="tableName" value="MEALS"/>
         <property name="generatedKeyName" value="id"/>
     </bean>
-    <!--
-        <bean id="simpleJdbcInsert" class="org.springframework.jdbc.core.simple.SimpleJdbcInsert">
-            <constructor-arg ref="dataSource"/>
-            <property name="tableName" value="USERS"/>
-            <property name="generatedKeyName" value="id"/>
-        </bean>-->
+
+    <bean id="simpleJdbcInsert" class="org.springframework.jdbc.core.simple.SimpleJdbcInsert">
+        <constructor-arg ref="dataSource"/>
+        <property name="tableName" value="USERS"/>
+        <property name="generatedKeyName" value="id"/>
+    </bean>
 </beans>

@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.CollectionUtils;
 import ru.javawebinar.topjava.LoggerWrapper;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.repository.api.UserMealRepository;
@@ -55,7 +56,7 @@ public class DefaultJdbcUserMealRepository implements UserMealRepository {
     @Override
     public UserMeal get(int id, int userId) {
         final List<UserMeal> userMeals = jdbcTemplate.query("SELECT * FROM MEALS WHERE id = ? AND user_id = ?", ROW_MAPPER, id, userId);
-        return DataAccessUtils.requiredSingleResult(userMeals);
+        return CollectionUtils.isEmpty(userMeals) ? null : DataAccessUtils.requiredSingleResult(userMeals);
     }
 
     @Override
@@ -72,7 +73,7 @@ public class DefaultJdbcUserMealRepository implements UserMealRepository {
 
     @Override
     public void deleteAll(int userId) {
-        jdbcTemplate.update("DELETE FROM MEALS WHERE user_id=:?", userId);
+        jdbcTemplate.update("DELETE FROM MEALS WHERE user_id = ?", userId);
     }
 
     @Override
@@ -82,13 +83,13 @@ public class DefaultJdbcUserMealRepository implements UserMealRepository {
                 .addValue("date", Timestamp.valueOf(meal.getDateTime()))
                 .addValue("description", meal.getDescription())
                 .addValue("calories", meal.getCalories())
-                .addValue("user_id", meal.getUser().getId());
+                .addValue("user_id", userId);
         if (meal.isNew()) {
             Number newId = simpleJdbcInsert.executeAndReturnKey(map);
             meal.setId(newId.intValue());
         } else {
             if (namedParameterJdbcTemplate.update("UPDATE MEALS SET calories=:calories, " +
-                    "description=:description, date=:date, WHERE id=:id AND user_id=:userId", map) == 0) {
+                    "description=:description, date=:date WHERE id=:id AND user_id=:user_id", map) == 0) {
                 return null;
             }
         }
